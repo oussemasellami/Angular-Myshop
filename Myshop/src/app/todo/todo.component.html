@@ -1,0 +1,9 @@
+
+<table class="table table-striped">
+
+<tr >
+<td>{{todo.title}}</td>
+<td>Completed: {{todo.completed}}</td>
+<td><button (click)="sendEvent()" [disabled]="todo.completed">completed</button></td>
+</tr>
+</table>
