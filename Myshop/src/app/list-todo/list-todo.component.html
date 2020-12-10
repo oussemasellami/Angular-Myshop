@@ -1,0 +1,12 @@
+<div align="center">
+  Click pour avoir le nombre a faire :
+<button class="btn btn-success" (click)="getStat()">
+  <h1>{{n}}</h1>
+</button></div>
+
+
+<app-todo *ngFor="let t of listTodo"
+          [todo]="t"
+          (eventCompleted)="changeCompleted($event)">
+
+</app-todo>
