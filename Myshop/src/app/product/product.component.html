@@ -1,0 +1,12 @@
+<div class="col-md-3">
+  <div class="card" style="width: 18rem;">
+    <img src="../../assets/img.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{product.title}}</h5>
+      <p class="card-text">Prix: {{product.price}} $ <br> Quantite: {{product.quantity}} <br>
+        <a [routerLink]="['product',product.id]">Details</a></p>
+      <button class="btn btn-primary" (click)="sendNotif()">{{product.like}} J'aime</button>
+      <button class="btn btn-success" style="float: right">Acheter</button>
+    </div>
+  </div>
+</div>
