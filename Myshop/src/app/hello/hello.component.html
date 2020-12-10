@@ -1,0 +1,25 @@
+
+
+  <form>
+    <div class="form-group"  align="center">
+      <label>Recherche</label>
+      <input type="number" name="priceMax" [(ngModel)]="priceMax" class="form-control col-md-3">
+    </div>
+  </form>
+  <br> <br>
+  <div align="center">
+  <button class="btn btn-warning" (click)="showFormMethod()">Ajouter Nouveau Produit</button>
+  </div>
+    <br>
+  <br>
+  <app-form-product (eventProduct)="insert($event)" *ngIf="showForm">
+
+  </app-form-product>
+<div class="row">
+  <app-product *ngFor="let p of listProdcut; let i=index"
+               [product]="p"
+              (incrementEvent)="incrementLike($event)" >
+
+  </app-product>
+
+</div>
